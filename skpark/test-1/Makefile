@@ -11,7 +11,7 @@ run : $(SRC)
 	$(TARGET)
 
 clean :
-	rm -rf $(TARGET)
+	rm -rf $(TARGET) *.exp *.obj *.lib
 
 
 
