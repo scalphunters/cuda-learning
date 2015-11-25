@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wiener\defines.hpp" />
+    <ClInclude Include="wiener\errors.hpp" />
+    <ClInclude Include="wiener\math\comparison.hpp" />
+    <ClInclude Include="wiener\methods\montecarlo\samplepath.hpp" />
+    <ClInclude Include="wiener\methods\montecarlo\timegrid.hpp" />
+    <ClInclude Include="wiener\processes\wienerprocess.hpp" />
+    <ClInclude Include="wiener\processes\stochasticprocess.hpp" />
+    <ClInclude Include="wiener\time\asx.hpp" />
+    <ClInclude Include="wiener\time\businessdayconvention.hpp" />
+    <ClInclude Include="wiener\time\calendar.hpp" />
+    <ClInclude Include="wiener\time\calendars\argentina.hpp" />
+    <ClInclude Include="wiener\time\calendars\australia.hpp" />
+    <ClInclude Include="wiener\time\calendars\bespokecalendar.hpp" />
+    <ClInclude Include="wiener\time\calendars\brazil.hpp" />
+    <ClInclude Include="wiener\time\calendars\canada.hpp" />
+    <ClInclude Include="wiener\time\calendars\china.hpp" />
+    <ClInclude Include="wiener\time\calendars\czechrepublic.hpp" />
+    <ClInclude Include="wiener\time\calendars\denmark.hpp" />
+    <ClInclude Include="wiener\time\calendars\finland.hpp" />
+    <ClInclude Include="wiener\time\calendars\germany.hpp" />
+    <ClInclude Include="wiener\time\calendars\hongkong.hpp" />
+    <ClInclude Include="wiener\time\calendars\hungary.hpp" />
+    <ClInclude Include="wiener\time\calendars\iceland.hpp" />
+    <ClInclude Include="wiener\time\calendars\india.hpp" />
+    <ClInclude Include="wiener\time\calendars\indonesia.hpp" />
+    <ClInclude Include="wiener\time\calendars\israel.hpp" />
+    <ClInclude Include="wiener\time\calendars\italy.hpp" />
+    <ClInclude Include="wiener\time\calendars\japan.hpp" />
+    <ClInclude Include="wiener\time\calendars\jointcalendar.hpp" />
+    <ClInclude Include="wiener\time\calendars\mexico.hpp" />
+    <ClInclude Include="wiener\time\calendars\newzealand.hpp" />
+    <ClInclude Include="wiener\time\calendars\norway.hpp" />
+    <ClInclude Include="wiener\time\calendars\nullcalendar.hpp" />
+    <ClInclude Include="wiener\time\calendars\poland.hpp" />
+    <ClInclude Include="wiener\time\calendars\romania.hpp" />
+    <ClInclude Include="wiener\time\calendars\russia.hpp" />
+    <ClInclude Include="wiener\time\calendars\saudiarabia.hpp" />
+    <ClInclude Include="wiener\time\calendars\singapore.hpp" />
+    <ClInclude Include="wiener\time\calendars\slovakia.hpp" />
+    <ClInclude Include="wiener\time\calendars\southafrica.hpp" />
+    <ClInclude Include="wiener\time\calendars\southkorea.hpp" />
+    <ClInclude Include="wiener\time\calendars\sweden.hpp" />
+    <ClInclude Include="wiener\time\calendars\switzerland.hpp" />
+    <ClInclude Include="wiener\time\calendars\taiwan.hpp" />
+    <ClInclude Include="wiener\time\calendars\target.hpp" />
+    <ClInclude Include="wiener\time\calendars\turkey.hpp" />
+    <ClInclude Include="wiener\time\calendars\ukraine.hpp" />
+    <ClInclude Include="wiener\time\calendars\unitedkingdom.hpp" />
+    <ClInclude Include="wiener\time\calendars\unitedstates.hpp" />
+    <ClInclude Include="wiener\time\calendars\weekendsonly.hpp" />
+    <ClInclude Include="wiener\time\date.hpp" />
+    <ClInclude Include="wiener\time\dategenerationrule.hpp" />
+    <ClInclude Include="wiener\time\daycounter.hpp" />
+    <ClInclude Include="wiener\time\daycounters\actual360.hpp" />
+    <ClInclude Include="wiener\time\daycounters\actual365fixed.hpp" />
+    <ClInclude Include="wiener\time\daycounters\actual365nl.hpp" />
+    <ClInclude Include="wiener\time\daycounters\actualactual.hpp" />
+    <ClInclude Include="wiener\time\daycounters\business252.hpp" />
+    <ClInclude Include="wiener\time\daycounters\one.hpp" />
+    <ClInclude Include="wiener\time\daycounters\simpledaycounter.hpp" />
+    <ClInclude Include="wiener\time\daycounters\thirty360.hpp" />
+    <ClInclude Include="wiener\time\ecb.hpp" />
+    <ClInclude Include="wiener\time\frequency.hpp" />
+    <ClInclude Include="wiener\time\imm.hpp" />
+    <ClInclude Include="wiener\time\period.hpp" />
+    <ClInclude Include="wiener\time\schedule.hpp" />
+    <ClInclude Include="wiener\time\timeunit.hpp" />
+    <ClInclude Include="wiener\time\weekday.hpp" />
+    <ClInclude Include="wiener\utilities\dataformatters.hpp" />
+    <ClInclude Include="wiener\utilities\dataparsers.hpp" />
+    <ClInclude Include="wiener\utilities\null.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="main.cu" />
+    <CudaCompile Include="wiener\methods\montecarlo\samplepath.cu" />
+    <CudaCompile Include="wiener\methods\montecarlo\timegrid.cu" />
+    <CudaCompile Include="wiener\processes\wienerprocess.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wiener\errors.cpp" />
+    <ClCompile Include="wiener\time\asx.cpp" />
+    <ClCompile Include="wiener\time\businessdayconvention.cpp" />
+    <ClCompile Include="wiener\time\calendar.cpp" />
+    <ClCompile Include="wiener\time\calendars\argentina.cpp" />
+    <ClCompile Include="wiener\time\calendars\australia.cpp" />
+    <ClCompile Include="wiener\time\calendars\bespokecalendar.cpp" />
+    <ClCompile Include="wiener\time\calendars\brazil.cpp" />
+    <ClCompile Include="wiener\time\calendars\canada.cpp" />
+    <ClCompile Include="wiener\time\calendars\china.cpp" />
+    <ClCompile Include="wiener\time\calendars\czechrepublic.cpp" />
+    <ClCompile Include="wiener\time\calendars\denmark.cpp" />
+    <ClCompile Include="wiener\time\calendars\finland.cpp" />
+    <ClCompile Include="wiener\time\calendars\germany.cpp" />
+    <ClCompile Include="wiener\time\calendars\hongkong.cpp" />
+    <ClCompile Include="wiener\time\calendars\hungary.cpp" />
+    <ClCompile Include="wiener\time\calendars\iceland.cpp" />
+    <ClCompile Include="wiener\time\calendars\india.cpp" />
+    <ClCompile Include="wiener\time\calendars\indonesia.cpp" />
+    <ClCompile Include="wiener\time\calendars\israel.cpp" />
+    <ClCompile Include="wiener\time\calendars\italy.cpp" />
+    <ClCompile Include="wiener\time\calendars\japan.cpp" />
+    <ClCompile Include="wiener\time\calendars\jointcalendar.cpp" />
+    <ClCompile Include="wiener\time\calendars\mexico.cpp" />
+    <ClCompile Include="wiener\time\calendars\newzealand.cpp" />
+    <ClCompile Include="wiener\time\calendars\norway.cpp" />
+    <ClCompile Include="wiener\time\calendars\poland.cpp" />
+    <ClCompile Include="wiener\time\calendars\romania.cpp" />
+    <ClCompile Include="wiener\time\calendars\russia.cpp" />
+    <ClCompile Include="wiener\time\calendars\saudiarabia.cpp" />
+    <ClCompile Include="wiener\time\calendars\singapore.cpp" />
+    <ClCompile Include="wiener\time\calendars\slovakia.cpp" />
+    <ClCompile Include="wiener\time\calendars\southafrica.cpp" />
+    <ClCompile Include="wiener\time\calendars\southkorea.cpp" />
+    <ClCompile Include="wiener\time\calendars\sweden.cpp" />
+    <ClCompile Include="wiener\time\calendars\switzerland.cpp" />
+    <ClCompile Include="wiener\time\calendars\taiwan.cpp" />
+    <ClCompile Include="wiener\time\calendars\target.cpp" />
+    <ClCompile Include="wiener\time\calendars\turkey.cpp" />
+    <ClCompile Include="wiener\time\calendars\ukraine.cpp" />
+    <ClCompile Include="wiener\time\calendars\unitedkingdom.cpp" />
+    <ClCompile Include="wiener\time\calendars\unitedstates.cpp" />
+    <ClCompile Include="wiener\time\calendars\weekendsonly.cpp" />
+    <ClCompile Include="wiener\time\date.cpp" />
+    <ClCompile Include="wiener\time\dategenerationrule.cpp" />
+    <ClCompile Include="wiener\time\daycounters\actualactual.cpp" />
+    <ClCompile Include="wiener\time\daycounters\business252.cpp" />
+    <ClCompile Include="wiener\time\daycounters\simpledaycounter.cpp" />
+    <ClCompile Include="wiener\time\daycounters\thirty360.cpp" />
+    <ClCompile Include="wiener\time\ecb.cpp" />
+    <ClCompile Include="wiener\time\frequency.cpp" />
+    <ClCompile Include="wiener\time\imm.cpp" />
+    <ClCompile Include="wiener\time\period.cpp" />
+    <ClCompile Include="wiener\time\schedule.cpp" />
+    <ClCompile Include="wiener\time\timeunit.cpp" />
+    <ClCompile Include="wiener\time\weekday.cpp" />
+    <ClCompile Include="wiener\utilities\dataformatters.cpp" />
+    <ClCompile Include="wiener\utilities\dataparsers.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E284DF8-9417-46CF-B750-5AF8C910DD0D}</ProjectGuid>
+    <RootNamespace>FinCu</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.targets" />
+  </ImportGroup>
+</Project>
